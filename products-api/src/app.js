@@ -8,6 +8,7 @@ createRoles()
 
 import productsRouter from './routes/products.routes.js'
 import authRouter from './routes/auth.routes.js'
+import userRouter from './routes/user.routes.js'
 
 app.set('pkg', pkg)
 
@@ -25,5 +26,6 @@ app.get('/', (req, res) => {
 
 app.use('/api/products', productsRouter)
 app.use('/api/auth', authRouter)
+app.use('/api/users', userRouter)
 
 export default app
